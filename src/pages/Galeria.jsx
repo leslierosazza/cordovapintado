@@ -4,7 +4,7 @@ import Foto1 from '../images/galeria/Foto1.jpg';
 import Foto2 from '../images/galeria/Foto2.jpeg';
 import Foto3 from '../images/galeria/Foto3.jpeg';
 import Foto4 from '../images/galeria/Foto4.jpeg';
-import {TituloBanner, Banner, RowStyled} from './Galeria.styles'; 
+import "../css/Galeria.css";
 
 const style = {
     margin: '10px 10px',
@@ -14,12 +14,10 @@ const Galeria = () => {
     return (
         <>
             <Row gutter={[20, 20]} align="top | middle | bottom | stretch">
-                <Banner src={bannerGaleria} alt="Banner Galería" />
-                <TituloBanner>
-                    Galería
-                </TituloBanner>
+                <img className="Banner" src={bannerGaleria} alt="Banner Galería" />
+                <h1 className="TituloBanner">Galería</h1>
             </Row>
-            <RowStyled
+            <Row className="RowStyledG"
             gutter={{
                 xs: 8,
                 sm: 16,
@@ -43,7 +41,7 @@ const Galeria = () => {
                         />
                     </div>
                 </Col>
-                <Col span={7}>
+                <Col className="gutter-row" span={7}>
                     <div style={style}>
                         <Image
                             width={300}
@@ -51,7 +49,7 @@ const Galeria = () => {
                         />
                     </div>
                 </Col>
-                <Col span={7}>
+                <Col className="gutter-row" span={7}>
                     <div style={style}>
                         <Image
                             width={300}
@@ -59,7 +57,7 @@ const Galeria = () => {
                         />
                     </div>
                 </Col>
-            </RowStyled>
+            </Row>
         </>
     );
 };

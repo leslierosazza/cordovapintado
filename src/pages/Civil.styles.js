@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const desktopStartWidth = 992;
+const desktopStartWidth = 912;
 const tabletStartWidth = 768;
 const mobileStartWidth = 767;
 
@@ -52,13 +52,14 @@ export const Banner = styled.img`
     display: block;
     width: 940px;
     height: 490px;
+    position: relative;
     ${tablet}{
         display: block;
-        width: 57%;
+        /* width: 57%; */
         height: auto;
     }
     ${mobile}{
-        width: 34%;
+        width: 30%;
         height: auto; 
     }
 `;
@@ -82,6 +83,9 @@ export const Text = styled.text`
     line-height: 22px;
     margin-bottom: 20px;
     ${mobile}{
-        width: 245px;
+        width: 285px;
+    }
+    ${tablet}{
+        width: 470PX;
     }
 `;

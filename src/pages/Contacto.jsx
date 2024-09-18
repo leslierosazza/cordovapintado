@@ -1,10 +1,10 @@
 import {Row, Typography, Space, Col} from 'antd';
 import bannerContactenos from "../images/banner-Contactenos.jpg";
-import {GMapContainer, TituloBanner, Img, RowStyled} from './Contacto.styles';
 import Gmap from '../components/Gmap';
 import React from 'react';
 import "antd/dist/reset.css";
 import FormularioContacto from './FormularioContacto';
+import '../css/Contacto.css';
 
 const { Text, Title } = Typography;
 
@@ -17,25 +17,27 @@ const mt = {
     marginTop: 32,
 };
 
+const mb = {
+    marginBottom: 20,
+}
+
 const Contacto = () => {
 
     return (
         <>
-            <Row gutter={[20, 20]} align="top | middle | bottom | stretch">
-                <Img src={bannerContactenos} alt="Banner Contáctenos"/>
-                <TituloBanner>
-                    Contáctenos
-                </TituloBanner>
+            <Row>
+                <img className='bannerContacto' src={bannerContactenos} alt="Banner Contáctenos"/>
+                <h1 className="TituloBannerC">Contáctenos</h1>
             </Row>
-            <RowStyled style={mt}>
-                <Col span={12}>
-                    <Row gutter={[20]} align="top | middle | bottom | stretch">
+            <Row style={mt}>
+                <Col span={12} style={mb}>
+                    <Row>
                         <Title level={3}>Contáctenos</Title>
-                        <Text>Si usted desea comunicarse con nosotros puede acercarse, escribirnos o llamarnos</Text>
+                        <Text className='textoC'>Si usted desea comunicarse con nosotros puede acercarse, escribirnos o llamarnos</Text>
                     </Row>
-                    <Row gutter={[20]} align="top | middle | bottom | stretch" style={estiloTextos}>
+                    <Row style={estiloTextos}>
                         <Title level={4} style={mt}>Dirección</Title>
-                        <Text>Calle Los Progresistas Mz. ZZ-4 Lote 15 Urb. Pro – Los Olivos</Text>
+                        <Text className='width'>Calle Los Progresistas Mz. ZZ-4 Lote 15 Urb. Pro – Los Olivos</Text>
                         <Title level={4} style={mt}>Teléfonos</Title>
                         <Space.Compact direction="vertical">
                             <Text>Fijo: 6079495</Text>
@@ -50,14 +52,14 @@ const Contacto = () => {
                         </Row>
                     </Row>
                 </Col>
-                <Col span={12}>
+                {/* <Col span={12}>
                     <Title level={3}>Formulario de Contacto</Title>
-                    <Text>Para atender su consulta, por favor complete el siguiente formulario:</Text>
+                    <Text className='margin'>Para atender su consulta, por favor complete el siguiente formulario:</Text>
                     <div style={mt}>
                         <FormularioContacto/>
                     </div>
-                </Col>
-            </RowStyled>
+                </Col> */}
+            </Row>
         </>
     );
 };

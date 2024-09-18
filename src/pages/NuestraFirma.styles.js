@@ -17,8 +17,9 @@ const EstiloImg = css`
 
 export const Img2 = styled.img`
     ${EstiloImg};
+    position: relative;
     ${mobile}{
-        width: 460px;
+        width: 325px;
     }
 `;
 
@@ -33,11 +34,12 @@ export const TituloBanner = styled.div`
     text-align: center;
     ${mobile}{
         top: 280px;
-        right: 110px;
+        right: 50px;
     }
 `;
 
 export const Banner = styled.img`
+    position: relative;
     display: block;
     width: 100%;
     height: 562px;
@@ -71,7 +73,7 @@ export const Card = styled.div`
     line-height: 1.6;
     text-align: justify;
     ${mobile}{
-        width: 165%;
+        width: 118%;
         height: auto;
         margin-bottom: 20px;
         padding: 20px;
@@ -111,7 +113,7 @@ export const Img = styled.img`
     padding: 15px;
     margin: 0 24px;
     ${mobile}{
-        margin: 0 100px;
+        margin: 0 40px;
     }
 `;
 
@@ -120,7 +122,7 @@ export const ColStyled = styled.div`
     flex: 0 0 50%;
     max-width: 50%;
     ${mobile}{
-        width: 480px;
+        width: 320px;
         padding: 10px;
     }
 `;

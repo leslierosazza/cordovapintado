@@ -1,8 +1,10 @@
-import {Layout, Row, List} from 'antd';
-import {Banner, Button, Rectangulo, Title, RowStyled, Text} from './Civil.styles';
+import {Layout, Row, List, Button, Typography} from 'antd';
 import bannerCivil from '../images/banner-Civil.jpg'
 import {Link} from 'react-router-dom';
+import {useState} from 'react';
+import '../css/Civil.css';
 
+const { Text, Title} = Typography;
 
 const data = [
     'Patrimonio familiar',
@@ -17,21 +19,6 @@ const data = [
 
 const { Sider, Content } = Layout;
 
-const layoutStyle = {
-    borderRadius: 8,
-    overflow: 'hidden',
-    width: 'calc(100% - 8px)',
-    maxWidth: 'calc(100% - 8px)',
-    backgroundColor: 'white',
-};
-
-const siderStyle = {
-    minHeight: 120,
-    backgroundColor: '#ffffff',
-    flex: 'none',
-    width: 250,
-  };
-
   const left = {
     textAlign: 'left',
     fontSize: 26,
@@ -41,45 +28,43 @@ const siderStyle = {
     lineHeight: 2.3,
   };
 
-  const listStyle1 = {
-    border: 0,
-  };
-
 const Civil = () => {
     const handleClick = () => {
         window.open('https://wa.link/af8xy5', '_blank');
     };
+
+    const [size, setSize] = useState('large');
     return (
         <>
-            <Layout style={layoutStyle}>
-                <Sider style={siderStyle}>
+            <Layout className='layoutStyle'>
+            <div className="styleRow">
+                <Sider style={{backgroundColor: '#ffffff'}}>
                     <Title style={left}>
                         Áreas de Especialidades
                     </Title>
-                    <Link to='/Penal'><Rectangulo>Derecho Penal</Rectangulo></Link>
-                    <Link to='/Civil'><Rectangulo>Derecho Civil</Rectangulo></Link>
+                    <Link to='/Penal'><Button style={{width: 180,}} size={size}>Derecho Penal</Button></Link>
+                    <Link to='/Civil'><Button style={{width: 180,}} size={size}>Derecho Civil</Button></Link>
                 </Sider>
                 <Content>
                     <Row gutter={[20, 20]} align="top | middle | bottom | stretch">
-                        <Banner src={bannerCivil} alt="Banner Derecho Civil" />
+                        <img src={bannerCivil} className='BannerCivil' alt="Banner Derecho Civil" />
                     </Row>
-                    <RowStyled>
+                    <Row className='paddingRowC'>
                         <Title>DERECHO CIVIL</Title>
-                        <Text>
+                        <Text className='textoCivil'>
                         Asesoramos a personas, instituciones y empresas en sus derechos reales, protegiendo y cuidando su patrimonio y defendiendo sus derechos ante cualquier vulneración.
                         <br /> Ofrecemos lo siguiente:
                         </Text>
-                        <List style={listStyle1}
+                        <List className='listStyle1C'
                         size="large"
                         bordered
                         dataSource={data}
                         renderItem={(item) => <List style={listStyle2}>{item}</List>}
                         />
-                        <Row gutter={[20, 20]} align="top | middle | bottom | stretch">
-                            <Button onClick={handleClick}>Agenda tu cita</Button>
-                        </Row>
-                    </RowStyled>
+                        <Button className='botonCivil' onClick={handleClick}>Agenda tu cita</Button>
+                    </Row>
                 </Content>
+                </div>
             </Layout>
         </>
     );

@@ -19,11 +19,12 @@ export const TituloBanner = styled.div`
     text-align: center;
     ${mobile}{
         top: 280px;
-        right: 165px;
+        right: 96px;
     }
 `;
 
 export const Banner = styled.img`
+    position: relative;
     display: block;
     width: 100%;
     height: 562px;

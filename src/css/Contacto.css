@@ -1,0 +1,60 @@
+.bannerContacto {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 562px;
+}
+
+.TituloBannerC {
+    position: absolute;
+    color: white;
+    top: 400px;
+    right: 564px;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.RowStyledC {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.textoC {
+    display: block;
+}
+
+@media screen and (min-width: 375px) and (max-width:480px) {
+
+    .bannerContacto {
+        width: 42%;
+        height: auto; 
+    }
+
+    .TituloBannerC {
+        top: 290px;
+        right: 64px;
+    }
+
+    .RowStyledC {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .textoC {
+        width: 330px;
+        margin: 40px -135px -16px;
+    }
+
+    .width {
+        width: 330px;
+    }
+
+    .margin {
+        width: 330px;
+        display: block;
+        margin: 0px;
+    }
+}

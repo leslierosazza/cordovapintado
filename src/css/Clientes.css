@@ -1,0 +1,51 @@
+.RowStyledClientes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+    
+.ColStyled {
+    display: block;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+    
+.Banner {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 562px;
+}
+
+.TituloBannerC {
+    position: absolute;
+    color: white;
+    top: 400px;
+    right: 600px;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@media screen and (min-width: 375px) and (max-width:480px) {
+
+    .RowStyledClientes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ColStyled {
+        padding: 10px;
+    }
+
+    .Banner {
+        width: 42%;
+        height: auto; 
+    }
+
+    .TituloBannerC {
+        top: 280px;
+        right: 96px;
+    }
+}

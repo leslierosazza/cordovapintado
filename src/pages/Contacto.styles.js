@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {Row} from 'antd';
 
-const desktopStartWidth = 992;
+const desktopStartWidth = 912;
 const tabletStartWidth = 768;
 const mobileStartWidth = 767;
 

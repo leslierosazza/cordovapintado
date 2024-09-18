@@ -12,18 +12,19 @@ export const TituloBanner = styled.div`
     position: absolute;
     color: white;
     top: 400px;
-    right: 564px;
+    right: 600px;
     font-size: 32px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
     ${mobile}{
         top: 280px;
-        right: 168px;
+        right: 96px;
     }
 `;
 
 export const Banner = styled.img`
+    position: relative;
     display: block;
     width: 100%;
     height: 562px;

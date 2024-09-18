@@ -17,9 +17,10 @@ const EstiloImg = css`
 
 export const Img = styled.img`
     ${EstiloImg};
+    position: relative;
     ${mobile}{
         width: 310px;
-        margin: 0 -58px;
+        /* margin: 0 -58px; */
     }
     &:hover {
         filter: opacity(0.5);
@@ -30,6 +31,7 @@ export const Img = styled.img`
 
 export const Image = styled.img`
     ${EstiloImg};
+    position: relative;
     ${mobile}{
         width: 315px;
         margin-top: 20px;
@@ -39,37 +41,16 @@ export const Image = styled.img`
     }
 `;
 
-export const Text = styled.text`
-    display: flex;
-    flex-direction: row;
-    text-align: justify;
-    line-height: 24px;
-    width: 570px;
-
-    ${mobile}{
-        display: flex;
-        flex-direction: row;
-        width: 315px;
-        margin: 0;
-    }
-    ${tablet}{
-        /* margin: auto 60px; */
-    }
-
-    ${desktop}{
-        margin: 0;
-    }
-`;
-
 export const Title = styled.h1`
     font-size: 32px;
     padding: 30px 0;
     margin: 0;
     ${mobile}{
-        font-size: 20px;
+        font-size: 18px;
+        padding: 10px 22px;
     }
     ${tablet}{
-        margin: 0 90px;
+        /* margin: 0 90px; */
     }
 `;
 
@@ -82,7 +63,7 @@ export const Titleh2 = styled.h2`
     width: 248px;
     ${mobile}{
         top: 45px;
-        left: 10px;
+        left: 50px;
         font-size: 30px;
     }
 `;
@@ -144,37 +125,28 @@ export const TituloBanner = styled.div`
     }
 `;
 
-export const Banner = styled.img`
-    display: block;
-    width: 100%;
-    height: 562px;
-    ${tablet}{
-        display: block;
-        height: auto;
-    } 
-    ${mobile}{
-        width: 42%;
-        height: auto; 
-    }
-`;
-
 export const RowStyled = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     ${desktop}{
-        display: flex;
+        /* display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-between; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
     ${mobile}{
-        display: flex;
-        flex-direction: column;
+        /* display: flex;
+        flex-direction: column; */
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0px;
     }
     ${tablet}{
-        display: flex;
-        flex-direction: column;
-        margin: 0 55px;
-        
+        /* display: flex;
+        flex-direction: column; 
+        margin: 0 55px;*/
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
 `;

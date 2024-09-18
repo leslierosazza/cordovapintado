@@ -42,7 +42,7 @@ const FormularioContacto = () => {
             <textarea name='message' rows={15} required />
           </div>
           <div className='field'>
-            <button className='boton' type="primary">Enviar</button>
+            <button className='botonC' type="primary">Enviar</button>
           </div>
         </form>
   );

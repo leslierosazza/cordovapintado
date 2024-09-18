@@ -17,6 +17,15 @@ export const TituloBanner = styled.div`
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
+    ${mobile}{
+        top: 335px;
+        right: 45px;
+        width: 248px;
+    }
+    ${tablet}{
+        top: 450px;
+        right: 200px;
+    }
 `;
 
 export const Btn = styled.button`
@@ -39,12 +48,13 @@ export const Btn = styled.button`
 `;
 
 export const Banner = styled.img`
+    position: relative;
     display: block;
     width: 100%;
     height: 562px;
     ${tablet}{
         display: block;
-        width: 80%;
+        width: 62%;
         height: auto;
     }
     ${mobile}{
@@ -69,6 +79,9 @@ export const Title = styled.div`
     font-weight: 600;
     font-size: 38px;
     line-height: 1.2105263157894737;
+    ${mobile}{
+        font-size: 35px;
+    }
 `;
 
 export const Text = styled.text`
@@ -78,6 +91,9 @@ export const Text = styled.text`
     margin-top: 30px;
     margin-bottom: 30px;
     ${mobile}{
-        width: 450px; 
+        width: 324px; 
+    }
+    ${tablet}{
+        width: 700px;
     }
 `;

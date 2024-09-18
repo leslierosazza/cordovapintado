@@ -1,7 +1,10 @@
-import {Layout, Row, List} from 'antd';
+import {Layout, Row, List, Button, Typography} from 'antd';
 import bannerPenal from '../images/banner-Penal.jpg';
-import {Button, Rectangulo, Banner, RowStyled, Title, Text} from './Penal.styles';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import { useState } from 'react';
+import "../css/Penal.css";
+
+const { Text, Title} = Typography;
 
 const data = [
     'Omisión de Asistencia Familiar',
@@ -19,21 +22,6 @@ const data = [
 
 const { Sider, Content } = Layout;
 
-const layoutStyle = {
-    borderRadius: 8,
-    overflow: 'hidden',
-    width: 'calc(100% - 8px)',
-    maxWidth: 'calc(100% - 8px)',
-    backgroundColor: 'white',
-  };
-
-  const siderStyle = {
-    minHeight: 120,
-    backgroundColor: '#ffffff',
-    flex: 'none',
-    width: 250,
-  };
-
   const left = {
     textAlign: 'left',
     fontSize: 26,
@@ -43,45 +31,44 @@ const layoutStyle = {
     lineHeight: 2.3,
   };
 
-  const listStyle1 = {
-    border: 0,
-  };
-  
 const Penal = () => {
     const handleClick = () => {
         window.open('https://wa.link/af8xy5', '_blank');
     };
+
+    const [size, setSize] = useState('large');
     return (
         <>
-            <Layout style={layoutStyle}>
-                <Sider style={siderStyle}>
+            <Layout className='layoutStyle'>
+            <div className='styleRow'>
+                <Sider style={{backgroundColor: '#ffffff'}}>
                     <Title style={left}>
                         Áreas de Especialidades
                     </Title>
-                    <Link to='/Penal'><Rectangulo>Derecho Penal</Rectangulo></Link>
-                    <Link to='/Civil'><Rectangulo>Derecho Civil</Rectangulo></Link>
+                    <Link to='/Penal'><Button style={{width: 180,}} size={size}>Derecho Penal</Button></Link>
+                    <Link to='/Civil'><Button style={{width: 180,}} size={size}>Derecho Civil</Button></Link>
+                    
                 </Sider>
                 <Content>
-                    <Row gutter={[20, 20]} align="top | middle | bottom | stretch">
-                        <Banner src={bannerPenal} alt="Banner Derecho Penal" />
+                    <Row gutter={[20, 20]} align="stretch">
+                        <img src={bannerPenal} className='BannerPenal' alt="Banner Derecho Penal" />
                     </Row>
-                    <RowStyled>
+                    <Row className='paddingRowP'>
                         <Title>DERECHO PENAL</Title>
-                        <Text>
+                        <Text className='textoPenal'>
                         Promovemos y defendemos el derecho de las personas a vivir en libertad. Luchamos por la libertad de tránsito, la libertad ambulatoria, la libertad de expresión, la libertad personal y demás derechos conexos que establece la Constitución Política del Perú. Ofrecemos asesoría integral a personas e instituciones.
                         <br /> Ofrecemos lo siguiente:
                         </Text>
-                        <List style={listStyle1}
+                        <List className='listStyle1'
                         size="large"
                         bordered
                         dataSource={data}
                         renderItem={(item) => <List style={listStyle2}>{item}</List>}
                         />
-                        <Row gutter={[20, 20]} align="top | middle | bottom | stretch">
-                            <Button onClick={handleClick}>Agenda tu cita</Button>
-                        </Row>
-                    </RowStyled>
+                        <Button className='botonEnviar' onClick={handleClick}>Agenda tu cita</Button>
+                    </Row>
                 </Content>
+                </div>
             </Layout>
         </>  
     );

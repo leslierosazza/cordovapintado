@@ -1,4 +1,4 @@
-.ant-dropdown-menu {
+  .ant-dropdown-menu {
     animation: slide-up 0.3s ease;
   }
   
@@ -12,3 +12,251 @@
       opacity: 1;
     }
   }
+
+  .layoutStyleP {
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(100% - 8px);
+    max-width: calc(100% - 8px);
+    background-color: white;
+  }
+
+  .headerStyle {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000;
+    height: 96px;
+    justify-content: center;
+    background-color: #fff;
+    margin-top: 10px;
+  }
+
+  .ImgLogo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 99px;
+    height: auto;
+  }
+
+  .contentStyle {
+    text-align: justify;
+    width: 1200px;
+    min-height: 120px;
+    color: #000;
+    background-color: #fff;
+    margin: 0px auto;
+    padding: 30px;
+  }
+
+  .footerStyle {
+    text-align: center;
+    color: #fff;
+    background-color: black;
+    width: 1228px;
+    margin: auto;
+  } 
+
+  .ContenedorFooter {
+    background: #d9d9d9;
+    padding: 40px 20px 0px;
+    margin: auto;
+    /* width: 90%; */
+    height: auto;
+    max-width: calc(100% - 8px);
+    position: relative;
+    z-index: 1;
+  }
+
+  .ContenedorFooter .row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .anchoP {
+    width: 200px;
+  }
+
+  .spaceStyle {
+    column-gap: 30px;
+    margin-top: 20px;
+  }
+
+  .redesSociales {
+    width:40px; 
+    height:40px;
+    margin-right: 5px;
+  }
+
+  .styleP {
+    text-decoration: underline black;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .styleDatos {
+    margin-bottom: 20px;
+    width: 297px;
+    line-height: 25px;
+  }
+
+  .gap10 {
+    gap: 10px;
+  }
+
+  .width150 {
+    width: 150px;
+  }
+
+  .color {
+    color: #000;
+  }
+
+  .LogoFooter {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 180px;
+  }
+
+  @keyframes pulse {
+    0% {
+            box-shadow: 0 0 0 0px #08100bfa rgba(0, 0, 0, 0.2);
+        }
+    100% {
+            box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+        }
+  }
+
+  @keyframes shake {
+    0% { 
+      transform: translateY(0) 
+    }
+    25% { 
+      transform: translateY(8px) 
+    }
+    50% { 
+      transform: translateY(-8px) 
+    }
+    75% { 
+      transform: translateY(8px) 
+    }
+    100% { 
+      transform: translateY(0) 
+    }
+  }
+
+  .ImgWhatsApp {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    z-index: 2;
+    right: 0px;
+    bottom: -17px;
+    cursor: pointer;
+    /* box-shadow: 3px 3px 3px 3px #999; */
+    /* animation: pulse 2s infinite; */
+    
+  }
+
+  .ImgWhatsApp:hover{
+    animation: shake 1s;
+  }
+
+  @media screen and (min-device-width: 375px) and (max-device-width:480px) {
+
+    .headerStyle {
+      align-items: flex-end;
+    }
+    
+    .ImgLogo {
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    .footerStyle {
+        padding: 15px;   
+        width: 100%;
+    }
+
+    .ContenedorFooter .row {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 40px;
+        margin: 0 auto;
+    }
+    
+    .ContenedorMovil {
+        position: absolute;
+        width: 375px;
+        height: 115px;
+        max-width: 767px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        padding-inline: 0px;
+        transition: height 0.3s ease-in-out;
+    }   
+
+    .menuMovil {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out; /* Transición suave para max-height */
+    }
+
+    .menuDesplegado {
+        max-height: 500px;
+    }
+    
+    .menuColapsado {
+        max-height: 0;
+    }
+    
+    .ContenedorFooter {
+        width:375px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .LogoFooter {
+        width:100px;
+        height: auto;
+    }
+
+}
+@media screen and (min-device-width: 768px) {
+
+    .headerStyle {
+        align-items: center;
+    }
+
+    /* .ContenedorFooter {
+        width:912px;
+        max-width: 100%;
+    } 
+
+    .ContenedorFooter .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        margin: 0 70px;
+        row-gap: 40px;
+        column-gap: 120px;
+    }  */
+
+    .menuTablet {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 -45px;
+    }  
+
+    /* .footerStyle {
+      padding: 15px;   
+      width: 100%;
+    } */
+}

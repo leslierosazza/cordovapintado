@@ -22,22 +22,22 @@
     font-size: 14px;
   }
 
-  .boton {
-    display: block;
-    padding: 20px 20px;
+  .botonC {
+    position: static;
+    padding: 30px;
     color: #fff;
     background-color: #C59A4C;
     border-color: #707070;
     box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 16px;
     line-height: 0.3;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 20px;
     transition: 0.3s;
     cursor: pointer;
     &:hover {
         filter: opacity(0.9);
+        font-weight: 700;
     }
   }
 
@@ -50,3 +50,11 @@
     border: 2px solid #707070;
     
   }
+ @media (max-width: 767px) {
+    .field input {
+        min-width: 285px;
+    }
+    textarea {
+        width: 285px;
+    }
+ }

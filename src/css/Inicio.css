@@ -1,0 +1,176 @@
+  .banner {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 562px;
+    z-index: 1;
+  }
+
+  .h1Banner {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 326px;
+    right: 320px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .titulo {
+    padding: 30px 0;
+    margin: 0;
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .texto {
+    line-height: 24px;
+  }
+
+  .boton {
+    position: absolute;
+    z-index: 3;
+    top: 464px;
+    right: 520px;
+    background-color: #C59A4C;
+    color: white;
+    border-color: #707070;
+    box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 0.3;
+    height: 40px;
+    padding: 30px;
+    border-radius: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .marginRow {
+    margin: 20px 0;
+  }
+
+  .tituloH2 {
+    position: absolute;
+    font-size: 38px;
+    top: 92px;
+    left: 160px;
+    color: #fff;
+    width: 248px;
+  }
+
+  .Img {
+    position: relative;
+    display: block;
+    width: 560px;
+    height: auto;
+    border-radius: 50px;
+  }
+
+  .Img:hover {
+    filter: opacity(0.5);
+    -webkit-transform:scale(1.07);
+    transform:scale(1.07);
+  }
+
+  .RowStyledI {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .Image {
+    position: relative;
+    display: block;
+    width: 560px;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  @media screen and (min-device-width: 375px) and (max-device-width:480px) {
+
+    .banner {
+        width: 42%;
+        height: auto;
+    }
+
+    .h1Banner {
+        font-size: 8px;
+        top: 230px;
+        right: 30px;
+    }
+
+    .titulo {
+        /* padding: 10px 42px; */
+        font-size: 20px;
+    }
+
+    .size {
+      font-size: 18px;
+    }
+
+    .boton {
+        top: 290px;
+        right: 100px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .texto {
+        display: block;
+        width: 320px;
+        margin: 0px 40px;
+    }
+
+    .marginRow {
+      margin: 30px 0;
+    }
+
+    .tituloH2 {
+        top: 52px;
+        left: 102px;
+        font-size: 30px;
+    }
+
+    .Img {
+        width: 310px;
+        border-radius: 30px;
+        margin-left: 48px;
+    }
+
+    .RowStyledI {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 10px -44px;
+    }
+
+    .Image {
+        width: 315px;
+        margin-top: 20px;
+    }
+  }
+
+  @media screen and (max-width: 768px) and (min-width: 912px) {
+
+    .banner {
+        display: block;
+        height: auto;
+    }
+
+    .h1Banner {
+        right: 80px;
+        font-size: 16px;
+    }
+
+    .boton {
+        right: 300px;
+    }
+
+    .RowStyledI {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  

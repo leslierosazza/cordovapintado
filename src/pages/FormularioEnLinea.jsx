@@ -1,9 +1,10 @@
-import {message, Row} from 'antd';
+import {Button, message, Row, Typography} from 'antd';
 import bannerFormulario from '../images/banner-Formulario.jpg';
-import {TituloBanner, Banner, RowStyled, Title, Text} from './FormularioEnLinea.styles';
 import {useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
-import "../css/FormularioContacto.css";
+import '../css/FormularioEnLinea.css';
+
+const {Text, Title} = Typography;
 
 const FormularioEnLinea = () => {
     
@@ -29,18 +30,15 @@ const FormularioEnLinea = () => {
           );
       };
 
-  
     return (
         <>
-            <Row gutter={[20, 20]} align="top | middle | bottom | stretch">
-                <Banner src={bannerFormulario} alt="Banner Formulario en Línea" />
-                <TituloBanner>
-                    Formulario en Línea
-                </TituloBanner>
+            <Row>
+                <img className='BannerF' src={bannerFormulario} alt="Banner Formulario en Línea" />
+                <h1 className='TituloBannerF'>Formulario en Línea</h1>
             </Row>
-            <RowStyled>
-                <Title>Formulario en Línea</Title>
-                <Text>
+            <Row className='RowStyledF'>
+                <h1>Formulario en Línea</h1>
+                <Text className='textoF'>
                     Para los clientes que deseen rellenar el formulario y enviar documentos de manera electrónica, por favor complete el siguiente formulario:
                 </Text>
                 <form ref={form} onSubmit={sendEmail} className='field'>
@@ -69,10 +67,10 @@ const FormularioEnLinea = () => {
                         <textarea name='message' rows={15} required />
                     </div>
                     <div className='field'>
-                        <button className='boton' type="primary">Enviar</button>
+                        <Button className='botonF' type="primary">Enviar</Button>
                     </div>
                 </form>
-            </RowStyled>
+            </Row>
         </>
     );
 };

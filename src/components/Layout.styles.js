@@ -27,9 +27,10 @@ export const ContenedorFooter = styled.div`
     width: 90%;
     height: auto;
     max-width: calc(100% - 8px);
+    position: relative;
     ${mobile} {
 		width:375px;
-        max-width: 90%;
+        max-width: 100%;
         display: flex;
         flex-direction: column;
         align-items: stretch;
@@ -69,8 +70,9 @@ const shake = keyframes`
 export const ImgWhatsApp = styled.img`
     width: 90px;
     height: 90px;
-    position: relative;
-    bottom: 30px;
+    position: absolute;
+    left: 1100px;
+    bottom: -17px;
     cursor: pointer;
     /* box-shadow: 3px 3px 3px 3px #999; */
     /* animation: ${pulse} 2s infinite; */
@@ -80,30 +82,15 @@ export const ImgWhatsApp = styled.img`
     }
 
     ${desktop} {
-        left: 1048px;
+        left: 1100px;
     }
 
     ${mobile} {
-		left:200px;
-        bottom: 20px;
+		left: 272px;
+        bottom: -25px;
 	}
     ${tablet} {
-        left: 540px; 
+        /* left: 580px; 
+        bottom: -30px; */
 	} 
-`;
-
-export const Hamburger = styled.div`
-    display: none;
-    position: fixed;
-    margin-bottom: 16px;
-    margin-top: 30px; 
-    width: 80px; 
-    background: #707070;
-    font-size: 30px;
-    border-radius: 10px;
-    ${mobile} {
-		display: block;
-        position: relative;
-        background: white;
-	}
 `;
