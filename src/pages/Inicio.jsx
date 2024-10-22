@@ -1,5 +1,7 @@
-import { Col, Row, Typography, Button } from "antd";
-import bannerInicio from "../images/banner-Inicio.jpg";
+import { Col, Row, Typography, Button, Carousel } from "antd";
+import bannerInicio1 from "../images/banner-Inicio.jpg";
+import bannerInicio2 from "../images/banner-Inicio2.jpg";
+import bannerInicio3 from "../images/banner-Inicio3.jpg";
 import DerechoPenal from "../images/dp.jpg";
 import DerechoCivil from "../images/dc.jpg";
 import { Link } from "react-router-dom";
@@ -22,8 +24,17 @@ const Inicio = () => {
 
     return (
         <>
-            <Row gutter={[20, 20]} align="stretch">
-                <img className="banner" src={bannerInicio} alt="Banner Inicio" />
+                <Carousel arrows autoplay dotPosition="right" infinite={true}>
+                    <div>
+                        <img className="banner" src={bannerInicio1} alt="Banner Inicio" />
+                    </div>
+                    <div>
+                        <img className="banner" src={bannerInicio2} alt="Banner Inicio" />
+                    </div>
+                    <div>
+                        <img className="banner" src={bannerInicio3} alt="Banner Inicio" />
+                    </div>
+                </Carousel> 
                 <div className="h1Banner">
                     <h1>
                     Estudio Jurídico <br/>
@@ -33,7 +44,7 @@ const Inicio = () => {
                 <Button className="boton" onClick={handleClick}>
                     Agenda tu cita
                 </Button>
-            </Row>
+            
             <Row>
                 <h1 className="titulo">Estudio Jurídico <br /> Córdova Pintado Leyva & Asociados</h1>
             </Row>

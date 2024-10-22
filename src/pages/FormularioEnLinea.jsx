@@ -67,7 +67,7 @@ const FormularioEnLinea = () => {
                         <textarea name='message' rows={15} required />
                     </div>
                     <div className='field'>
-                        <Button className='botonF' type="primary">Enviar</Button>
+                        <button className='botonF' type="primary">Enviar</button>
                     </div>
                 </form>
             </Row>
