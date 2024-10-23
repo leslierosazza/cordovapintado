@@ -24,7 +24,7 @@ const Inicio = () => {
 
     return (
         <>
-                <Carousel arrows autoplay dotPosition="right" infinite={true}>
+                <Carousel arrows autoplay infinite={true}>
                     <div>
                         <img className="banner" src={bannerInicio1} alt="Banner Inicio" />
                     </div>
